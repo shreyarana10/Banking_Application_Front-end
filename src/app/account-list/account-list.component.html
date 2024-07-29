@@ -1,0 +1,22 @@
+<table class="table table-triped">
+    <thead class="table table-dark">
+      <tr>
+        <th>ID</th>
+        <th>Account Holder Name</th>
+        <th>Balance</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let account of accounts">
+        <td>{{ account.id }}</td> <!-- Corrected 'Td' to 'td' -->
+        <td>{{ account.accountHolderName }}</td>
+        <td>{{ account.balance }}</td>
+        <td (click)="deposit(account.id)" class="btn btn-info" style="margin: 10px;">Deposit</td>
+        <td (click)="withdraw(account.id)" class="btn btn-info" style="margin:10px;">withdraw</td>
+        <td (click)="delete(account.id)" class="btn btn-danger" style="margin:10px;">delete</td>
+        <td (click)="view(account.id)" class="btn btn-info" style="margin:10px;">view</td>
+      </tr>
+    </tbody>
+  </table>
+  
